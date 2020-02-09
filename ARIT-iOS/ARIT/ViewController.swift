@@ -11,7 +11,7 @@ import SceneKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, LNTouchDelegate {
+class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
     public static var instance: ViewController?
     public var imgBuildingSmall: UIImageView!
     public var lblBuildingAcronym: UILabel!
@@ -57,6 +57,19 @@ class ViewController: UIViewController, LNTouchDelegate {
         updateBotWindow()
     }
     
+    func sessionWasInterrupted(_ session: ARSession) {
+    }
+    
+    func sessionInterruptionEnded(_ session: ARSession) {
+        sceneLocationView.run()
+    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+    }
+    
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+    }
+    
     func updateBotWindow() {
         UIView.animate(withDuration: 0.6, animations: {() in
             self.botWindowView.frame.origin.y = UIScreen.main.bounds.size.height - (self.lastTouched != nil ? self.botWindowHeight: 0.0)
@@ -66,7 +79,6 @@ class ViewController: UIViewController, LNTouchDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         ViewController.instance = self
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
@@ -117,6 +129,7 @@ class ViewController: UIViewController, LNTouchDelegate {
         //let coordinate = CLLocationCoordinate2D(latitude: 43.085307, longitude: -77.671207)
         sceneLocationView.removeAllNodes()
         sceneLocationView.locationNodeTouchDelegate = self
+        sceneLocationView.sceneTrackingDelegate = self
         for point in points {
             let coordinate = CLLocationCoordinate2D(latitude: point.lat, longitude: point.lon)
             let location = CLLocation(coordinate: coordinate, altitude: 160)

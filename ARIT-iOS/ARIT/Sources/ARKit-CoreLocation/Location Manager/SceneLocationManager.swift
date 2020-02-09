@@ -121,6 +121,7 @@ public final class SceneLocationManager {
 
 public extension SceneLocationManager {
     func run() {
+        removeOldLocationEstimates()
         pause()
 		if #available(iOS 11.0, *) {
 			updateEstimatesTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
