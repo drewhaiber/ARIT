@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A22D665223F0030500501F90 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D665123F0030500501F90 /* TriangleView.swift */; };
+		A256EA9323EFE7C900C8D3FD /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A256EA9223EFE7C900C8D3FD /* Waypoint.swift */; };
+		A256EA9723EFF02700C8D3FD /* partData.json in Resources */ = {isa = PBXBuildFile; fileRef = A256EA9623EFF02700C8D3FD /* partData.json */; };
+		A2E426B223EF484B00459B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426B123EF484B00459B0D /* AppDelegate.swift */; };
+		A2E426B423EF484B00459B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426B323EF484B00459B0D /* SceneDelegate.swift */; };
+		A2E426B623EF484B00459B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426B523EF484B00459B0D /* ViewController.swift */; };
+		A2E426B923EF484B00459B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E426B723EF484B00459B0D /* Main.storyboard */; };
+		A2E426BB23EF484E00459B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E426BA23EF484E00459B0D /* Assets.xcassets */; };
+		A2E426BE23EF484E00459B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E426BC23EF484E00459B0D /* LaunchScreen.storyboard */; };
+		A2E426E023EF497800459B0D /* AttributedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426C823EF497800459B0D /* AttributedType.swift */; };
+		A2E426E123EF497800459B0D /* ScalingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426CA23EF497800459B0D /* ScalingScheme.swift */; };
+		A2E426E223EF497800459B0D /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426CB23EF497800459B0D /* LocationNode.swift */; };
+		A2E426E323EF497800459B0D /* PolylineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426CC23EF497800459B0D /* PolylineNode.swift */; };
+		A2E426E423EF497800459B0D /* LocationAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426CD23EF497800459B0D /* LocationAnnotationNode.swift */; };
+		A2E426E523EF497800459B0D /* SceneLocationView+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426CE23EF497800459B0D /* SceneLocationView+ARSCNViewDelegate.swift */; };
+		A2E426E623EF497800459B0D /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D023EF497800459B0D /* SceneLocationEstimate.swift */; };
+		A2E426E723EF497800459B0D /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D123EF497800459B0D /* SceneLocationEstimate+Extensions.swift */; };
+		A2E426E823EF497800459B0D /* SceneLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D223EF497800459B0D /* SceneLocationManager.swift */; };
+		A2E426E923EF497800459B0D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D323EF497800459B0D /* LocationManager.swift */; };
+		A2E426EA23EF497800459B0D /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D523EF497800459B0D /* SCNVector3+Extensions.swift */; };
+		A2E426EB23EF497800459B0D /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D623EF497800459B0D /* FloatingPoint+Radians.swift */; };
+		A2E426EC23EF497800459B0D /* BaseTypes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D723EF497800459B0D /* BaseTypes+Extensions.swift */; };
+		A2E426ED23EF497800459B0D /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D823EF497800459B0D /* CGPoint+Extensions.swift */; };
+		A2E426EE23EF497800459B0D /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426D923EF497800459B0D /* CLLocation+Extensions.swift */; };
+		A2E426EF23EF497800459B0D /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426DA23EF497800459B0D /* SCNNode+Extensions.swift */; };
+		A2E426F023EF497800459B0D /* ARKit_CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426DB23EF497800459B0D /* ARKit_CoreLocation.swift */; };
+		A2E426F123EF497800459B0D /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426DC23EF497800459B0D /* SceneLocationView.swift */; };
+		A2E426F223EF497800459B0D /* SceneLocationViewEstimateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E426DD23EF497800459B0D /* SceneLocationViewEstimateDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A22D665123F0030500501F90 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		A256EA9223EFE7C900C8D3FD /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		A256EA9623EFF02700C8D3FD /* partData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = partData.json; sourceTree = "<group>"; };
+		A2E426AE23EF484B00459B0D /* ARIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E426B123EF484B00459B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2E426B323EF484B00459B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A2E426B523EF484B00459B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2E426B823EF484B00459B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2E426BA23EF484E00459B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2E426BD23EF484E00459B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2E426BF23EF484E00459B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E426C823EF497800459B0D /* AttributedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedType.swift; sourceTree = "<group>"; };
+		A2E426CA23EF497800459B0D /* ScalingScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalingScheme.swift; sourceTree = "<group>"; };
+		A2E426CB23EF497800459B0D /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		A2E426CC23EF497800459B0D /* PolylineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolylineNode.swift; sourceTree = "<group>"; };
+		A2E426CD23EF497800459B0D /* LocationAnnotationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAnnotationNode.swift; sourceTree = "<group>"; };
+		A2E426CE23EF497800459B0D /* SceneLocationView+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationView+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		A2E426D023EF497800459B0D /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		A2E426D123EF497800459B0D /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426D223EF497800459B0D /* SceneLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationManager.swift; sourceTree = "<group>"; };
+		A2E426D323EF497800459B0D /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A2E426D523EF497800459B0D /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426D623EF497800459B0D /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		A2E426D723EF497800459B0D /* BaseTypes+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseTypes+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426D823EF497800459B0D /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426D923EF497800459B0D /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426DA23EF497800459B0D /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		A2E426DB23EF497800459B0D /* ARKit_CoreLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARKit_CoreLocation.swift; sourceTree = "<group>"; };
+		A2E426DC23EF497800459B0D /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		A2E426DD23EF497800459B0D /* SceneLocationViewEstimateDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationViewEstimateDelegate.swift; sourceTree = "<group>"; };
+		A2E426DE23EF497800459B0D /* ARCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCL.h; sourceTree = "<group>"; };
+		A2E426DF23EF497800459B0D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2E426AB23EF484B00459B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2E426A523EF484B00459B0D = {
+			isa = PBXGroup;
+			children = (
+				A2E426B023EF484B00459B0D /* ARIT */,
+				A2E426AF23EF484B00459B0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2E426AF23EF484B00459B0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426AE23EF484B00459B0D /* ARIT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2E426B023EF484B00459B0D /* ARIT */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426C523EF497800459B0D /* Sources */,
+				A2E426B123EF484B00459B0D /* AppDelegate.swift */,
+				A2E426B323EF484B00459B0D /* SceneDelegate.swift */,
+				A2E426B523EF484B00459B0D /* ViewController.swift */,
+				A256EA9623EFF02700C8D3FD /* partData.json */,
+				A2E426B723EF484B00459B0D /* Main.storyboard */,
+				A2E426BA23EF484E00459B0D /* Assets.xcassets */,
+				A2E426BC23EF484E00459B0D /* LaunchScreen.storyboard */,
+				A2E426BF23EF484E00459B0D /* Info.plist */,
+				A22D665123F0030500501F90 /* TriangleView.swift */,
+				A256EA9223EFE7C900C8D3FD /* Waypoint.swift */,
+			);
+			path = ARIT;
+			sourceTree = "<group>";
+		};
+		A2E426C523EF497800459B0D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426C623EF497800459B0D /* ARKit-CoreLocation */,
+				A2E426DE23EF497800459B0D /* ARCL.h */,
+				A2E426DF23EF497800459B0D /* Info.plist */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A2E426C623EF497800459B0D /* ARKit-CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426C723EF497800459B0D /* Util */,
+				A2E426C923EF497800459B0D /* Nodes */,
+				A2E426CE23EF497800459B0D /* SceneLocationView+ARSCNViewDelegate.swift */,
+				A2E426CF23EF497800459B0D /* Location Manager */,
+				A2E426D423EF497800459B0D /* Extensions */,
+				A2E426DB23EF497800459B0D /* ARKit_CoreLocation.swift */,
+				A2E426DC23EF497800459B0D /* SceneLocationView.swift */,
+				A2E426DD23EF497800459B0D /* SceneLocationViewEstimateDelegate.swift */,
+			);
+			path = "ARKit-CoreLocation";
+			sourceTree = "<group>";
+		};
+		A2E426C723EF497800459B0D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426C823EF497800459B0D /* AttributedType.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A2E426C923EF497800459B0D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426CA23EF497800459B0D /* ScalingScheme.swift */,
+				A2E426CB23EF497800459B0D /* LocationNode.swift */,
+				A2E426CC23EF497800459B0D /* PolylineNode.swift */,
+				A2E426CD23EF497800459B0D /* LocationAnnotationNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		A2E426CF23EF497800459B0D /* Location Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426D023EF497800459B0D /* SceneLocationEstimate.swift */,
+				A2E426D123EF497800459B0D /* SceneLocationEstimate+Extensions.swift */,
+				A2E426D223EF497800459B0D /* SceneLocationManager.swift */,
+				A2E426D323EF497800459B0D /* LocationManager.swift */,
+			);
+			path = "Location Manager";
+			sourceTree = "<group>";
+		};
+		A2E426D423EF497800459B0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2E426D523EF497800459B0D /* SCNVector3+Extensions.swift */,
+				A2E426D623EF497800459B0D /* FloatingPoint+Radians.swift */,
+				A2E426D723EF497800459B0D /* BaseTypes+Extensions.swift */,
+				A2E426D823EF497800459B0D /* CGPoint+Extensions.swift */,
+				A2E426D923EF497800459B0D /* CLLocation+Extensions.swift */,
+				A2E426DA23EF497800459B0D /* SCNNode+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2E426AD23EF484B00459B0D /* ARIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E426C223EF484E00459B0D /* Build configuration list for PBXNativeTarget "ARIT" */;
+			buildPhases = (
+				A2E426AA23EF484B00459B0D /* Sources */,
+				A2E426AB23EF484B00459B0D /* Frameworks */,
+				A2E426AC23EF484B00459B0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARIT;
+			productName = ARIT;
+			productReference = A2E426AE23EF484B00459B0D /* ARIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2E426A623EF484B00459B0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = BradzTech;
+				TargetAttributes = {
+					A2E426AD23EF484B00459B0D = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A2E426A923EF484B00459B0D /* Build configuration list for PBXProject "ARIT" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2E426A523EF484B00459B0D;
+			productRefGroup = A2E426AF23EF484B00459B0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2E426AD23EF484B00459B0D /* ARIT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2E426AC23EF484B00459B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E426BE23EF484E00459B0D /* LaunchScreen.storyboard in Resources */,
+				A2E426BB23EF484E00459B0D /* Assets.xcassets in Resources */,
+				A256EA9723EFF02700C8D3FD /* partData.json in Resources */,
+				A2E426B923EF484B00459B0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2E426AA23EF484B00459B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E426EC23EF497800459B0D /* BaseTypes+Extensions.swift in Sources */,
+				A2E426EE23EF497800459B0D /* CLLocation+Extensions.swift in Sources */,
+				A256EA9323EFE7C900C8D3FD /* Waypoint.swift in Sources */,
+				A2E426F123EF497800459B0D /* SceneLocationView.swift in Sources */,
+				A2E426E223EF497800459B0D /* LocationNode.swift in Sources */,
+				A2E426E623EF497800459B0D /* SceneLocationEstimate.swift in Sources */,
+				A2E426F223EF497800459B0D /* SceneLocationViewEstimateDelegate.swift in Sources */,
+				A2E426E423EF497800459B0D /* LocationAnnotationNode.swift in Sources */,
+				A2E426E823EF497800459B0D /* SceneLocationManager.swift in Sources */,
+				A2E426B623EF484B00459B0D /* ViewController.swift in Sources */,
+				A2E426E023EF497800459B0D /* AttributedType.swift in Sources */,
+				A2E426E123EF497800459B0D /* ScalingScheme.swift in Sources */,
+				A2E426E523EF497800459B0D /* SceneLocationView+ARSCNViewDelegate.swift in Sources */,
+				A2E426E723EF497800459B0D /* SceneLocationEstimate+Extensions.swift in Sources */,
+				A2E426B223EF484B00459B0D /* AppDelegate.swift in Sources */,
+				A2E426ED23EF497800459B0D /* CGPoint+Extensions.swift in Sources */,
+				A2E426B423EF484B00459B0D /* SceneDelegate.swift in Sources */,
+				A2E426EB23EF497800459B0D /* FloatingPoint+Radians.swift in Sources */,
+				A2E426E323EF497800459B0D /* PolylineNode.swift in Sources */,
+				A2E426E923EF497800459B0D /* LocationManager.swift in Sources */,
+				A2E426EA23EF497800459B0D /* SCNVector3+Extensions.swift in Sources */,
+				A2E426EF23EF497800459B0D /* SCNNode+Extensions.swift in Sources */,
+				A22D665223F0030500501F90 /* TriangleView.swift in Sources */,
+				A2E426F023EF497800459B0D /* ARKit_CoreLocation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2E426B723EF484B00459B0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2E426B823EF484B00459B0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2E426BC23EF484E00459B0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2E426BD23EF484E00459B0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2E426C023EF484E00459B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2E426C123EF484E00459B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2E426C323EF484E00459B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X96856U43U;
+				INFOPLIST_FILE = ARIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradztech.ARIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2E426C423EF484E00459B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X96856U43U;
+				INFOPLIST_FILE = ARIT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradztech.ARIT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2E426A923EF484B00459B0D /* Build configuration list for PBXProject "ARIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E426C023EF484E00459B0D /* Debug */,
+				A2E426C123EF484E00459B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2E426C223EF484E00459B0D /* Build configuration list for PBXNativeTarget "ARIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E426C323EF484E00459B0D /* Debug */,
+				A2E426C423EF484E00459B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2E426A623EF484B00459B0D /* Project object */;
+}
