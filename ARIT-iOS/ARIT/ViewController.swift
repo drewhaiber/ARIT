@@ -19,11 +19,11 @@ class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
     public var botWindowView: UIView!
     private let botWindowHeight: CGFloat = 200
     private var lastTouched: LocationAnnotationNode?
-    private var sceneLocationView = SceneLocationView()
+    private var sceneLocationView: SceneLocationView?
     private var points = [Waypoint]()
     
     func annotationNodeTouched(node: AnnotationNode) {
-        for laNode in sceneLocationView.locationNodes {
+        for laNode in sceneLocationView!.locationNodes {
             if let laNode = laNode as? LocationAnnotationNode,
                 let point = laNode.waypoint {
                 if laNode.annotationNode == node {
@@ -61,7 +61,9 @@ class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
-        sceneLocationView.run()
+        DispatchQueue.main.async {
+            self.restartLocationView()
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
@@ -80,8 +82,6 @@ class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewController.instance = self
-        sceneLocationView.run()
-        view.addSubview(sceneLocationView)
         
         botWindowView = UIView(frame: CGRect(x: 0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: botWindowHeight))
         botWindowView.backgroundColor = UIColor.init(white: 0.1, alpha: 1.0)
@@ -121,15 +121,22 @@ class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
             print(error)
         }
         
-        replaceAllPoints()
+        restartLocationView()
     }
     
-    public func replaceAllPoints() {
+    public func restartLocationView() {
+        sceneLocationView?.pause()
+        sceneLocationView?.removeFromSuperview()
+        sceneLocationView = SceneLocationView()
+        sceneLocationView?.run()
+        view.addSubview(sceneLocationView!)
+        view.bringSubviewToFront(botWindowView)
+        
         //let image = UIImage(named: "pin")!
         //let coordinate = CLLocationCoordinate2D(latitude: 43.085307, longitude: -77.671207)
-        sceneLocationView.removeAllNodes()
-        sceneLocationView.locationNodeTouchDelegate = self
-        sceneLocationView.sceneTrackingDelegate = self
+        sceneLocationView!.removeAllNodes()
+        sceneLocationView!.locationNodeTouchDelegate = self
+        sceneLocationView!.sceneTrackingDelegate = self
         for point in points {
             let coordinate = CLLocationCoordinate2D(latitude: point.lat, longitude: point.lon)
             let location = CLLocation(coordinate: coordinate, altitude: 160)
@@ -158,14 +165,14 @@ class ViewController: UIViewController, LNTouchDelegate, SceneTrackingDelegate {
             annotationNode.waypoint = point
             annotationNode.scalingScheme = ScalingScheme.linear(threshold: 1000)
             annotationNode.ignoreAltitude = true
-            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+            sceneLocationView!.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         }
     }
 
     override func viewDidLayoutSubviews() {
       super.viewDidLayoutSubviews()
 
-      sceneLocationView.frame = view.bounds
+      sceneLocationView?.frame = view.bounds
     }
 }
 
